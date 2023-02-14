@@ -6,6 +6,7 @@ interface SlideTitleProps {
 
 interface SlideContentProps {
   position: number | string;
+  transition: string;
 }
 
 export const SlideTitle = styled.img<SlideTitleProps>`
@@ -38,7 +39,7 @@ export const SlideTitle = styled.img<SlideTitleProps>`
 
 export const SlideContent = styled.div<SlideContentProps>`
   display: flex;
-  transition: transform 0.3s ease;
+  transition: ${(props) => props.transition};
   transform: translateX(${(props) => props.position}px);
 `;
 
@@ -46,6 +47,7 @@ export const SlideContainer = styled.section`
   background-color: ${(props) => props.theme.colors.background};
   overflow: hidden;
   margin-top: 1rem;
+  display: grid;
 `;
 
 export const SlideButton = styled.button`

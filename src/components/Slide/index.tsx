@@ -18,6 +18,7 @@ const Slide: React.FC = () => {
   const [active, setActive] = React.useState<number>(0);
   const [position, setPosition] = React.useState<number | string>(0);
   const [photos, setPhotos] = React.useState([]);
+  const [transition, setTransition] = React.useState('transform 0.2s ease');
   const contentRef = React.useRef<HTMLInputElement>(null);
 
   React.useEffect(() => {
@@ -47,23 +48,31 @@ const Slide: React.FC = () => {
 
   const slidePrev = () => {
     if (active > 0) {
+      setTransition('transform 0.2s ease');
       setActive(active - 1);
     } else {
       setActive(photos.length - 1);
+      setTransition('');
     }
   };
 
   const slideNext = () => {
     if (active < photos.length - 1) {
+      setTransition('transform 0.2s ease');
       setActive(active + 1);
     } else if (active === photos.length - 1) {
       setActive(0);
+      setTransition('');
     }
   };
 
   return (
     <SlideContainer>
-      <SlideContent ref={contentRef} position={position}>
+      <SlideContent
+        ref={contentRef}
+        position={position}
+        transition={transition}
+      >
         {photos.map((photo: fetchType) => (
           <SlideTitle key={photo.id} imgSrc={photo.src.original} />
         ))}
