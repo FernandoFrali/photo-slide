@@ -11,6 +11,10 @@ declare module 'styled-components' {
       background: string;
       text: string;
       hover: string;
+      scroll: {
+        track: string;
+        thumb: string;
+      };
     };
   }
 }

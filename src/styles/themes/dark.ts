@@ -8,5 +8,9 @@ export default {
     background: '#222',
     text: '#fff',
     hover: '#105066',
+    scroll: {
+      track: '#000',
+      thumb: '#105066',
+    },
   },
 };
