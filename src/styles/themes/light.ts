@@ -7,5 +7,6 @@ export default {
 
     background: '#D9DBF1',
     text: '#fff',
+    hover: '#1e9c94',
   },
 };

@@ -21,6 +21,11 @@ export const SlideTitle = styled.img<SlideTitleProps>`
   margin: 0 10%;
   background-color: ${(props) => props.theme.colors.secondary};
   border-radius: 4px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(0.8, 0.8);
+  }
 
   @media screen and (min-width: 1910px) and (max-width: 1920px) {
     max-width: 550px;
@@ -44,6 +49,7 @@ export const SlideContent = styled.div<SlideContentProps>`
 `;
 
 export const SlideContainer = styled.section`
+  transition: background-color 0.3s ease;
   background-color: ${(props) => props.theme.colors.background};
   overflow: hidden;
   margin-top: 1rem;
@@ -58,6 +64,11 @@ export const SlideButton = styled.button`
   border-radius: 4px;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.text};
+
+  &:hover {
+    transition: background-color 0.2s ease;
+    background-color: ${(props) => props.theme.colors.hover};
+  }
 `;
 
 export const SlideNavigation = styled.nav`
