@@ -71,7 +71,6 @@ const Slide: React.FC = () => {
         transition={transition}
       >
         {photos.map((photo: fetchType, index) => (
-          // <SlideTitle key={photo.id} imgSrc={photo.src.original} />
           <div key={photo.id}>
             {index === photoIndex && (
               <SlideTitle key={photo.id} imgSrc={photo.src.original} />
