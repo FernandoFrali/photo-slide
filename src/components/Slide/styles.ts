@@ -38,6 +38,7 @@ export const SlideTitle = styled.img<SlideTitleProps>`
 
 export const SlideContent = styled.div<SlideContentProps>`
   display: flex;
+  margin-top: 50px;
   transition: ${(props) => props.transition};
   transform: translateX(${(props) => props.position}px);
   &:hover {
@@ -48,23 +49,24 @@ export const SlideContent = styled.div<SlideContentProps>`
 
 export const SlideContainer = styled.section`
   transition: background-color 0.3s ease;
-  background-color: ${(props) => props.theme.colors.background};
   overflow: hidden;
   margin-top: 1rem;
   display: grid;
   justify-content: center;
+  position: relative;
+  z-index: 2;
 `;
 
 export const SlideButton = styled.button`
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     -webkit-appearance: none !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     opacity: 0 !important;
   }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     cursor: pointer;
     margin: 0 30px;
-    padding: 15px 30px;
+    padding: 16px 32px;
     border: 0;
     border-radius: 4px;
     background-color: ${(props) => props.theme.colors.primary};
@@ -77,12 +79,12 @@ export const SlideButton = styled.button`
 `;
 
 export const SlideNavigation = styled.nav`
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 800px) {
     display: flex;
     justify-content: space-between;
-    margin: 1rem auto;
+    margin: 0.5rem auto;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     display: grid !important;
     grid-area: 1 / 1 !important;
     z-index: 1 !important;

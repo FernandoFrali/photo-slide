@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Container } from './styles';
 import ReactSwitch from 'react-switch';
 import { ThemeContext } from 'styled-components';
+import { useTheme } from 'styled-components';
 import moon from './moon.svg';
 import sun from './sun.svg';
 
