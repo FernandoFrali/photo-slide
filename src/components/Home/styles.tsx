@@ -6,7 +6,7 @@ export const HomeStyle = styled.div`
   display: grid;
   text-align: center;
   align-items: center;
-  grid-template-rows: 40vh 10vh 10vh 40vh;
+  grid-template-rows: 30vh 20vh 20vh 30vh;
   grid-template-areas:
     'header'
     'body'
@@ -28,11 +28,6 @@ export const HomeStyle = styled.div`
   }
 
   button {
-    align-self: center;
-    justify-self: center;
-    /* width: 6rem; */
-    padding: 16px 32px;
-    grid-area: footerOne;
   }
 
   .text-animated {
@@ -53,7 +48,7 @@ export const HomeStyle = styled.div`
     animation: text-anime 3s linear infinite;
     background: linear-gradient(to right, blue, aqua, aqua, blue);
     background-size: 200%;
-    background-clip: compatibility;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
@@ -111,6 +106,36 @@ export const HomeStyle = styled.div`
     }
     to {
       transform: rotate(180deg);
+    }
+  }
+
+  .btn-try-it {
+    display: inline-block;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 50px;
+    background-size: 200%;
+    text-align: center;
+    border: 2px solid #3dade9;
+    font-size: 37px;
+    background: -webkit-linear-gradient(left, #3dade9, #072d94);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    align-self: center;
+    justify-self: center;
+    grid-area: footerOne;
+    font-weight: bolder;
+
+    &:hover {
+      animation: text-anime 3s linear infinite;
+      background: linear-gradient(to right, blue, aqua, aqua, blue);
+      background-size: 200%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
     }
   }
 `;
