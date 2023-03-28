@@ -35,7 +35,11 @@ const Slide: React.FC = () => {
   }, [active]);
 
   const fetchPhotos = async () => {
-    const response = await fetch('https://api.pexels.com/v1/curated');
+    const response = await fetch('https://api.pexels.com/v1/curated', {
+      headers: {
+        Authorization: "k9v2fTGSKoI9WFL359gkeiSlqjmrrrUdqSClIwAdsXZrW0VRsgJdbO2y",
+      },
+    });
     const json = await response.json();
     setPhotos(json.photos);
   };
