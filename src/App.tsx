@@ -14,6 +14,7 @@ const App = () => {
   const [theme, setTheme] = React.useState(dark);
   const [error, setError] = React.useState<string | null>(null);
   const secondDivRef = useRef<null | HTMLDivElement>(null);
+  const slidesRef = useRef<null | HTMLDivElement>(null);
 
   React.useEffect(() => {
     const savedThemeLocal = localStorage.getItem('theme') as string;
@@ -58,15 +59,11 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="container">
-        <Home />
-        <div className="slides">
+        <Home slideRef={slidesRef} />
+        <div className="slides" ref={slidesRef}>
           <GlobalStyle />
           <Header toggleTheme={toggleTheme} />
           <Slide />
-          <button onClick={handleClick}>Role para baixo</button>
-        </div>
-        <div className="slides" ref={secondDivRef}>
-          <PhotosEffect />
         </div>
       </div>
     </ThemeProvider>

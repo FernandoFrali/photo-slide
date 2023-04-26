@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 export const GlowStyle = styled.div`
   height: 500px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
   aspect-ratio: 1;
   -webkit-transform: translate(-50% -50%);
   position: absolute;
@@ -26,5 +29,9 @@ export const GlowStyle = styled.div`
     to {
       transform: rotate(360deg);
     }
+  }
+
+  @media (max-width: 1200px) {
+      display: none;
   }
 `;

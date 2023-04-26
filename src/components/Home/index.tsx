@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { ReactElement } from 'react';
 import { HomeStyle } from './styles';
 
-const Home: React.FC = () => {
+interface Props {
+  slideRef: React.RefObject<HTMLDivElement>
+}
+
+const Home: React.FC<Props> = ({ slideRef }) => {
   const starAnimation = () => {
     let index = 0,
       interval = 1000;
@@ -26,6 +30,8 @@ const Home: React.FC = () => {
     }
   };
   starAnimation();
+
+  const handleClick = () => slideRef.current?.scrollIntoView();
 
   return (
     <HomeStyle className="slides">
@@ -92,7 +98,7 @@ const Home: React.FC = () => {
           Just photos, <span>but you can SLIDE!</span>
         </p>
       </h1>
-      <a className="btn-try-it">Try it!</a>
+      <a className="btn-try-it" onClick={handleClick}>Try it!</a>
     </HomeStyle>
   );
 };

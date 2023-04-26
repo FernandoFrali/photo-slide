@@ -43,7 +43,9 @@ export default createGlobalStyle`
 
   .container {
     height: 100vh;
+    -webkit-overflow-scrolling: touch;
     scroll-snap-type: y mandatory;
+    -webkit-scroll-snap-type: mandatory;
     overflow-y: scroll;
     position: relative;
   }
