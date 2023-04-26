@@ -60,8 +60,8 @@ export default createGlobalStyle`
 
   .glow {
     background-color: white;
-  height: 500px;
-  aspect-ratio: 1;
+    height: 500px;
+    aspect-ratio: 1;
   }
 
   button {

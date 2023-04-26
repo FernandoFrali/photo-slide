@@ -4,4 +4,5 @@
   position: absolute;
   z-index: 1;
   backdrop-filter: blur(200px);
+  -webkit-backdrop-filter: blur(200px);
 }

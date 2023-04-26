@@ -3,15 +3,16 @@ import styled from 'styled-components';
 export const GlowStyle = styled.div`
   height: 500px;
   aspect-ratio: 1;
+  -webkit-transform: translate(-50% -50%);
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 500px;
+  top: 500px;
   transform: translate(-50% -50%);
+  -webkit-transform: translate(-50% -50%);
   border-radius: 50%;
   background: linear-gradient(to right, aquamarine, mediumpurple);
   animation: rotate 20s infinite;
-  /* filter: blur(200px); */
-  /* z-index: 2; */
+  -webkit-animation: rotate 20s infinite;
 
   @keyframes rotate {
     from {
