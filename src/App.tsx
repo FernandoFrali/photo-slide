@@ -3,7 +3,6 @@ import { ThemeProvider } from 'styled-components';
 
 import Slide from './components/Slide/index';
 import Header from './components/Header/index';
-import PhotosEffect from './components/PhotosEffect/index';
 
 import GlobalStyle from './styles/global';
 import light from './styles/themes/light';
@@ -13,7 +12,6 @@ import Home from './components/Home';
 const App = () => {
   const [theme, setTheme] = React.useState(dark);
   const [error, setError] = React.useState<string | null>(null);
-  const secondDivRef = useRef<null | HTMLDivElement>(null);
   const slidesRef = useRef<null | HTMLDivElement>(null);
 
   React.useEffect(() => {
@@ -31,8 +29,6 @@ const App = () => {
       }
     }
   }, []);
-
-  const handleClick = () => secondDivRef.current?.scrollIntoView();
 
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light);
